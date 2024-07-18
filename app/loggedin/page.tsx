@@ -5,6 +5,7 @@ import Tasks from "@/components/tasktuner/tasks";
 import UserProfile from "@/components/nav/user-profile";
 import Sidebar from "@/components/nav/side-bar";
 import MobileNav from "@/components/nav/mobile-nav";
+import TodoList from "@/components/todos/todo-list";
 
 export default function Home() {
   const tasks = useQuery(api.tasks.get);
@@ -15,9 +16,11 @@ export default function Home() {
       <div className="flex flex-col">
         <MobileNav/>
         <main className="flex flex-1 flex-col gap-4 p-4 lg:px-8">
-        <h1>TaskTuner</h1>
-      
+          <TodoList/>
+
         </main>
+        
+
       </div>
       
     </div>
